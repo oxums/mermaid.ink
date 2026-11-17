@@ -1,3 +1,6 @@
 # Shell scripts and checksum lists run/compare inside Linux containers.
 *.sh text eol=lf
 tools/fonts/SHA256SUMS text eol=lf
+# Recorded responses and the served home page must stay byte-exact (their sha256 is checked).
+tests/fixtures/** -text
+static/** -text
