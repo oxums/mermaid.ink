@@ -1,0 +1,15 @@
+{
+  "id": "D22__home",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "17940",
+    "content-type": "text/html; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 17940,
+  "body_sha256": "fe28408363b76a180e626c6635d239a484acfad77af06417ee9a2c35157f7187",
+  "body_file": "bodies/D22__home.html",
+  "error_text": null,
+  "nondeterministic": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "D11__b64-len-mod4-1",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "15625",
+    "content-type": "image/svg+xml",
+    "vary": "Origin"
+  },
+  "body_len": 15625,
+  "body_sha256": "9d3ed173cf65368613aed00b0b1327043b1bcd93a430c977a53eed2554c5fd55",
+  "body_file": "bodies/D11__b64-len-mod4-1.svg",
+  "error_text": null,
+  "nondeterministic": false
+}

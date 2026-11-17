@@ -1,0 +1,15 @@
+{
+  "id": "K01__img__type-webp",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "15288",
+    "content-type": "image/webp",
+    "vary": "Origin"
+  },
+  "body_len": 15288,
+  "body_sha256": "74e04bec50613183c1836b2564bfdb95444a90a4cac24660e3cf47867658cade",
+  "body_file": "bodies/K01__img__type-webp.webp",
+  "error_text": null,
+  "nondeterministic": false
+}

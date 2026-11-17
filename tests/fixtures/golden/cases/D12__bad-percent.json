@@ -1,0 +1,15 @@
+{
+  "id": "D12__bad-percent",
+  "status": 500,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "21",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 21,
+  "body_sha256": "e41656eb2ba6c6293bf6dd928e5a88cdbc50535cab661c1969e0f598e497ed62",
+  "body_file": "bodies/D12__bad-percent.txt",
+  "error_text": "Internal Server Error",
+  "nondeterministic": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "F14__pdf__noparams",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "151",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 151,
+  "body_sha256": "5ed953f5fb53f48552e2efc19681b44f3396b610cfd4ea94839501054b89e5de",
+  "body_file": "bodies/F14__pdf__noparams.txt",
+  "error_text": "Parse error on line 3:\n...osed --> B    B -->|label C\n----------------------^\nExpecting 'SQE', 'TAGEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PIPE'",
+  "nondeterministic": false
+}

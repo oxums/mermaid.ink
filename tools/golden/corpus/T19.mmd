@@ -1,0 +1,16 @@
+gitGraph
+    commit id: "init"
+    commit id: "feat-base"
+    branch develop
+    checkout develop
+    commit id: "dev-1"
+    branch feature
+    checkout feature
+    commit id: "feat-1"
+    commit id: "feat-2" tag: "v0.1-rc"
+    checkout develop
+    merge feature
+    checkout main
+    merge develop tag: "v1.0"
+    commit id: "hotfix" type: HIGHLIGHT
+    cherry-pick id: "feat-1"

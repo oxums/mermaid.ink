@@ -1,0 +1,21 @@
+{
+  "id": "T12__pdf__paper-tabloid.landscape",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "260525",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 260525,
+  "body_sha256": "5e58be10d54e7d3b614fab4a737dfff253b32d9103a43fd0863a633a49a46e8e",
+  "body_file": "bodies/T12__pdf__paper-tabloid.landscape.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "second": {
+    "status": 200,
+    "body_len": 260523,
+    "body_sha256": "20245b5310d53bd635b60e76e04c841db45c19e8493857dae0f5b9d5294a8672"
+  },
+  "nondeterministic_ignoring_pdf_dates": true
+}

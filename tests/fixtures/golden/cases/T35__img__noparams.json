@@ -1,0 +1,20 @@
+{
+  "id": "T35__img__noparams",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "43721",
+    "content-type": "image/jpeg",
+    "vary": "Origin"
+  },
+  "body_len": 43721,
+  "body_sha256": "0c722e76ba19adeff393cbd027372b50ab22882114cc3c96ee6663efd32fd2ab",
+  "body_file": "bodies/T35__img__noparams.jpg",
+  "error_text": null,
+  "nondeterministic": true,
+  "second": {
+    "status": 200,
+    "body_len": 33271,
+    "body_sha256": "4a122c7d3ce8d42ef1961a3d63a9580619b89ae4b19a67a15d021b826390c3e5"
+  }
+}

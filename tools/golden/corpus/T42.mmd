@@ -1,0 +1,10 @@
+usecase-beta
+    actor Customer
+    actor Clerk
+    systemBoundary Shop
+        UC1["Place order"]
+        UC2["Pay"]
+    end
+    Customer --> UC1
+    Customer --> UC2
+    Clerk --> UC1

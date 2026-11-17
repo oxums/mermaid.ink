@@ -1,0 +1,16 @@
+{
+  "id": "K07__pdf__noparams",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "22230",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 22230,
+  "body_sha256": "2d0b2526b87df8719d7b21169e0d5de398e0a546b0d7747674a3b2f9aef703b0",
+  "body_file": "bodies/K07__pdf__noparams.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

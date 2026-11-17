@@ -1,0 +1,16 @@
+{
+  "id": "T41__pdf__noparams",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "23004",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 23004,
+  "body_sha256": "968e4ef73d8057a9a8d48f2c757c3d97a3b99499590c4e00060f58142169f73b",
+  "body_file": "bodies/T41__pdf__noparams.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

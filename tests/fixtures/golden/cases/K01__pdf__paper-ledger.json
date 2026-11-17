@@ -1,0 +1,16 @@
+{
+  "id": "K01__pdf__paper-ledger",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "64060",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 64060,
+  "body_sha256": "217833bed08cde4ed13f201788661658b2281dcda365a503567ab5d6ff15a489",
+  "body_file": "bodies/K01__pdf__paper-ledger.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

@@ -1,0 +1,1 @@
+the scaled width must be between 1 and 1005

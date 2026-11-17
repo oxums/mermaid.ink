@@ -1,0 +1,88 @@
+{
+  "_doc": "Expanded by capture.mjs. Subjects: Kxx = K-series encoded string, Txx/Fxx = pako form from tests/fixtures/corpus/encoded.json. Queries are sent verbatim (already URL-encoded). Path placeholders: {K01}, {T01} (pako), {T01.base64}, {D.<name>} from encoded.json.",
+  "origin": "https://parity.test",
+  "instances": {
+    "main": "http://localhost:3101",
+    "timeout": "http://localhost:3102",
+    "maxw": "http://localhost:3103",
+    "fa": "http://localhost:3104"
+  },
+  "corpus_endpoints": ["svg", "img", "pdf"],
+  "params": [
+    {
+      "endpoint": "svg",
+      "subjects": ["K01", "T08", "T12", "T25"],
+      "queries": [
+        "bgColor=123123", "bgColor=!slategray", "bgColor=!SlateGray", "bgColor=!non-existant-color",
+        "bgColor=FF000055", "bgColor=abc", "bgColor=12345", "bgColor=zzzabc", "bgColor=!red;%20x", "bgColor=%23fff",
+        "theme=dark", "theme=forest", "theme=neutral", "theme=default", "theme=DARK", "theme=bogus",
+        "width=1000", "height=1000", "width=1000&height=1000", "width=100&scale=1.555", "width=100&scale=2.445",
+        "width=20000", "width=5000&scale=3", "scale=2", "width=12abc", "width=1e3", "width=0x10", "width=",
+        "width=-1", "width=1&width=2", "bgColor=a&bgColor=b", "theme=a&theme=b"
+      ]
+    },
+    {
+      "endpoint": "img",
+      "subjects": ["K01", "T08", "T13", "T28", "T03", "T09", "T30"],
+      "queries": [
+        "type=jpeg", "type=png", "type=webp", "type=PNG", "type=abcd",
+        "type=png&width=1000", "type=png&height=1000", "type=png&width=1000&height=1000", "type=png&width=1000&scale=2",
+        "type=png&bgColor=!white", "type=png&theme=dark&bgColor=1b1b1f", "type=png&width=200&scale=2"
+      ]
+    },
+    {
+      "endpoint": "pdf",
+      "subjects": ["K01", "T08", "T12"],
+      "queries": [
+        "paper=a0", "paper=a1", "paper=a2", "paper=a3", "paper=a4", "paper=a5", "paper=a6",
+        "paper=letter", "paper=legal", "paper=tabloid", "paper=ledger", "paper=A3", "paper=not-a-size",
+        "landscape", "paper=a4&landscape", "paper=a3&landscape", "paper=letter&landscape", "paper=legal&landscape",
+        "paper=tabloid&landscape", "paper=A3&landscape", "paper=not-a-size&landscape",
+        "landscape=false", "paper=a4&landscape=false", "paper=a0&landscape=false",
+        "fit", "width=1000&height=800&fit", "fit&paper=a3&landscape", "bgColor=!red", "paper=a3&landscape&width=700"
+      ]
+    }
+  ],
+  "extra": [
+    { "subject": "T19w", "endpoint": "img", "query": "" },
+    { "subject": "F19", "endpoint": "svg", "query": "theme=dark" }
+  ],
+  "dseries": [
+    { "id": "D01", "name": "serde-unknown", "path": "/svg/foo:bar" },
+    { "id": "D02", "name": "pako-uppercase", "path": "/svg/{D.pako_upper}" },
+    { "id": "D03", "name": "serde-constructor", "path": "/svg/constructor:%7B%22code%22%3A%22graph%20TD%3BA--%3EB%22%7D" },
+    { "id": "D04", "name": "serde-hasownproperty", "path": "/svg/hasOwnProperty:x" },
+    { "id": "D05", "name": "serde-tostring", "path": "/svg/toString:x" },
+    { "id": "D06", "name": "pako-std-alphabet-pct", "path": "/svg/{D.pako_std_pct}" },
+    { "id": "D07", "name": "pako-padded", "path": "/svg/{D.pako_padded}" },
+    { "id": "D08", "name": "pako-truncated", "path": "/svg/{D.pako_truncated}" },
+    { "id": "D09", "name": "pako-gzip", "path": "/svg/{D.pako_gzip}" },
+    { "id": "D10", "name": "pako-rawdeflate", "path": "/svg/{D.pako_rawdeflate}" },
+    { "id": "D11", "name": "b64-len-mod4-1", "path": "/svg/{D.b64_len_mod4_1}" },
+    { "id": "D12", "name": "bad-percent", "path": "/svg/%E0%A4%A" },
+    { "id": "D13", "name": "uppercase-route", "path": "/IMG/{K01}" },
+    { "id": "D14", "name": "trailing-slash", "path": "/svg/{K01}/" },
+    { "id": "D15", "name": "img-no-code", "path": "/img" },
+    { "id": "D16", "name": "img-slash-no-code", "path": "/img/" },
+    { "id": "D17", "name": "head", "method": "HEAD", "path": "/svg/{K01}" },
+    { "id": "D18", "name": "post", "method": "POST", "path": "/svg/{K01}" },
+    { "id": "D19", "name": "preflight", "method": "OPTIONS", "path": "/svg/{K01}", "headers": { "Access-Control-Request-Method": "GET", "Access-Control-Request-Headers": "X-Foo" } },
+    { "id": "D20", "name": "options-no-acrm", "method": "OPTIONS", "path": "/svg/{K01}" },
+    { "id": "D21", "name": "unknown-path", "path": "/foo" },
+    { "id": "D22", "name": "home", "path": "/" },
+    { "id": "D23", "name": "no-origin", "path": "/svg/{K01}", "no_origin": true },
+    { "id": "D24", "name": "preflight-unknown-path", "method": "OPTIONS", "path": "/foo", "headers": { "Access-Control-Request-Method": "GET" } },
+    { "id": "D25", "name": "head-no-origin-home", "method": "HEAD", "path": "/", "no_origin": true }
+  ],
+  "env": [
+    { "instance": "timeout", "subject": "T01", "endpoint": "svg", "query": "" },
+    { "instance": "timeout", "subject": "T01", "endpoint": "img", "query": "" },
+    { "instance": "timeout", "subject": "K01", "endpoint": "svg", "query": "width=-1" },
+    { "instance": "timeout", "path": "/", "name": "home" },
+    { "instance": "maxw", "subject": "K01", "endpoint": "svg", "query": "width=1000&scale=1.005" },
+    { "instance": "maxw", "subject": "K01", "endpoint": "svg", "query": "width=1000&scale=1.006" },
+    { "instance": "maxw", "subject": "K01", "endpoint": "svg", "query": "width=2000" },
+    { "instance": "maxw", "subject": "K01", "endpoint": "img", "query": "type=png&width=1000&scale=1.005" },
+    { "instance": "fa", "subject": "F09", "endpoint": "svg", "query": "" }
+  ]
+}

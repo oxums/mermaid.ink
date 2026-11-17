@@ -1,0 +1,15 @@
+{
+  "id": "F13.base64__svg__noparams",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "264",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 264,
+  "body_sha256": "eb668875d31bb5c8645d9179f50282233bcfb5e24a451271246f939d1d33e4ba",
+  "body_file": "bodies/F13.base64__svg__noparams.txt",
+  "error_text": "Edge limit exceeded. 500 edges found, but the limit is 500.\n\nInitialize mermaid with maxEdges set to a higher number to allow more edges.\nYou cannot set this config via configuration inside the diagram as it is a secure config.\nYou have to call mermaid.initialize.",
+  "nondeterministic": false
+}

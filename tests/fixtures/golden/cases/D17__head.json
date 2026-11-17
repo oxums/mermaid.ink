@@ -1,0 +1,15 @@
+{
+  "id": "D17__head",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "17024",
+    "content-type": "image/svg+xml",
+    "vary": "Origin"
+  },
+  "body_len": 0,
+  "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "body_file": null,
+  "error_text": null,
+  "nondeterministic": false
+}

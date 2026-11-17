@@ -1,0 +1,16 @@
+{
+  "id": "K01__pdf__paper-not-a-size",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "64075",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 64075,
+  "body_sha256": "d84f4adfa66a9d9a351ead23a6d9c4489ced70a07452d06c01840eb2d2bebd2f",
+  "body_file": "bodies/K01__pdf__paper-not-a-size.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

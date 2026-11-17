@@ -1,0 +1,15 @@
+{
+  "id": "K01__svg__bgColor-_red__20x",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "17024",
+    "content-type": "image/svg+xml",
+    "vary": "Origin"
+  },
+  "body_len": 17024,
+  "body_sha256": "d2cadc946a143d2341783d336dd9a636e7d746dcebf85616d13548631c4392a0",
+  "body_file": "bodies/K01__svg__bgColor-_red__20x.svg",
+  "error_text": null,
+  "nondeterministic": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "K24__img__width-200.scale-2",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "14117",
+    "content-type": "image/jpeg",
+    "vary": "Origin"
+  },
+  "body_len": 14117,
+  "body_sha256": "d0e675cccd161076806b8e7ddd2654fc3e416ca29a18c691a24da9b1bc3b4bfb",
+  "body_file": "bodies/K24__img__width-200.scale-2.jpg",
+  "error_text": null,
+  "nondeterministic": false
+}

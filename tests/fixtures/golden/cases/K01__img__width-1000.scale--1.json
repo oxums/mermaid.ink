@@ -1,0 +1,15 @@
+{
+  "id": "K01__img__width-1000.scale--1",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "54",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 54,
+  "body_sha256": "8207a69500befb50f10986b7c782de63d20eaf24c00cae2a178d012aa251313c",
+  "body_file": "bodies/K01__img__width-1000.scale--1.txt",
+  "error_text": "invalid scale value - must be a number between 1 and 3",
+  "nondeterministic": false
+}

@@ -1,0 +1,11 @@
+C4Dynamic
+    title Dynamic diagram for Internet Banking System - API Application
+    ContainerDb(c4, "Database", "Relational Database Schema", "Stores user registration information.")
+    Container(c1, "Single-Page Application", "JavaScript and Angular", "Provides banking functionality via a browser.")
+    Container_Boundary(b, "API Application") {
+        Component(c3, "Security Component", "Spring Bean", "Provides sign in functionality.")
+        Component(c2, "Sign In Controller", "Spring MVC Rest Controller", "Allows users to sign in.")
+    }
+    Rel(c1, c2, "Submits credentials to", "JSON/HTTPS")
+    Rel(c2, c3, "Calls isAuthenticated() on")
+    Rel(c3, c4, "select * from users where username = ?", "JDBC")

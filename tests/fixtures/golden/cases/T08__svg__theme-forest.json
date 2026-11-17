@@ -1,0 +1,15 @@
+{
+  "id": "T08__svg__theme-forest",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "35682",
+    "content-type": "image/svg+xml",
+    "vary": "Origin"
+  },
+  "body_len": 35682,
+  "body_sha256": "9783e732e7c171d90ce2c6c10378f544553adffcf307e60bdf370b5bf7409917",
+  "body_file": "bodies/T08__svg__theme-forest.svg",
+  "error_text": null,
+  "nondeterministic": false
+}

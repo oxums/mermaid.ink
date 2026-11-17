@@ -1,0 +1,21 @@
+{
+  "id": "K10__pdf__noparams",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "53030",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 53030,
+  "body_sha256": "e8cde3db84df282daf0e12db1997a533360abd16fb71d4b7f55c599430cd5f9e",
+  "body_file": "bodies/K10__pdf__noparams.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "second": {
+    "status": 200,
+    "body_len": 53030,
+    "body_sha256": "ae632b16816ad6ffad198cabf17c29cb029405038fd740a9e2a80be07843eb29"
+  },
+  "nondeterministic_ignoring_pdf_dates": false
+}

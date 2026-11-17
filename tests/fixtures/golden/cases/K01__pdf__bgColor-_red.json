@@ -1,0 +1,16 @@
+{
+  "id": "K01__pdf__bgColor-_red",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "64130",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 64130,
+  "body_sha256": "aac3e0823d1fdcaad7a0bacc88fbe7a0cc27e3492ba922eba9d9066f501eefa0",
+  "body_file": "bodies/K01__pdf__bgColor-_red.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

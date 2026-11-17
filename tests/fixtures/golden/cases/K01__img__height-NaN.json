@@ -1,0 +1,15 @@
+{
+  "id": "K01__img__height-NaN",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "20",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 20,
+  "body_sha256": "72047d649e14b7904ef120c5b9062af51886385db517a2452abc42a94154421b",
+  "body_file": "bodies/K01__img__height-NaN.txt",
+  "error_text": "invalid height value",
+  "nondeterministic": false
+}

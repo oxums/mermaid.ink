@@ -1,0 +1,15 @@
+{
+  "id": "T25__svg__theme-bogus",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "45175",
+    "content-type": "image/svg+xml",
+    "vary": "Origin"
+  },
+  "body_len": 45175,
+  "body_sha256": "9d8989394bdd4f09e4205170fa8716b82f90562cd3a94b6a7949ef755653e268",
+  "body_file": "bodies/T25__svg__theme-bogus.svg",
+  "error_text": null,
+  "nondeterministic": false
+}

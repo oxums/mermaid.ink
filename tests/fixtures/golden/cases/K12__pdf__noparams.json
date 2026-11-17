@@ -1,0 +1,21 @@
+{
+  "id": "K12__pdf__noparams",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "17442",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 17442,
+  "body_sha256": "b137ecd93b4f44d66bd4af6b25bc7482e84501530addfc081b72c472f96b5c19",
+  "body_file": "bodies/K12__pdf__noparams.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "second": {
+    "status": 200,
+    "body_len": 17442,
+    "body_sha256": "94f79f034cd4565d38e6d1363a3f3c53e345032de525b5e7ff483be36d0c955b"
+  },
+  "nondeterministic_ignoring_pdf_dates": false
+}

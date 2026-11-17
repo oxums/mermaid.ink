@@ -1,0 +1,21 @@
+{
+  "id": "T12__pdf__bgColor-_red",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "260656",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 260656,
+  "body_sha256": "7bbc9663983027c01812afbe5671bc3b49d25c61bda5da2d70f19d67813184f0",
+  "body_file": "bodies/T12__pdf__bgColor-_red.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "second": {
+    "status": 200,
+    "body_len": 260657,
+    "body_sha256": "db7f208e75d3550738dac68fe256dabbca10a883d2a3540e63cd8bb396a3b681"
+  },
+  "nondeterministic_ignoring_pdf_dates": true
+}

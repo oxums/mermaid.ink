@@ -1,0 +1,21 @@
+{
+  "image": "mink-golden",
+  "image_id": "sha256:6f1608af5f5ce873f9c733f203280f904fcf4e43ecff66f933123e02cbb0478f",
+  "node": "v24.22.2",
+  "chrome": "Google Chrome for Testing 157.0.8103.50",
+  "versions": {
+    "mermaid": "12.3.0",
+    "elkjs": "0.12.1",
+    "@zenuml/core": "3.49.2",
+    "@mermaid-js/mermaid-zenuml": "1.0.1",
+    "@mermaid-js/layout-tidy-tree": "1.0.1",
+    "@fortawesome/fontawesome-free": "7.2.0",
+    "puppeteer": "25.17.0"
+  },
+  "fc_match": {
+    "trebuchet ms": "DejaVuSans.ttf: \"DejaVu Sans\" \"Book\"",
+    "sans-serif": "DejaVuSans.ttf: \"DejaVu Sans\" \"Book\"",
+    "serif": "DejaVuSerif.ttf: \"DejaVu Serif\" \"Book\"",
+    "monospace": "DejaVuSansMono.ttf: \"DejaVu Sans Mono\" \"Book\""
+  }
+}

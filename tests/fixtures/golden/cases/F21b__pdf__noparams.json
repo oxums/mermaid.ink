@@ -1,0 +1,16 @@
+{
+  "id": "F21b__pdf__noparams",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "22618",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 22618,
+  "body_sha256": "99c86db8ff10caf749071a6461ec2d89034ea7ceb6159d916ba46ccda9150b18",
+  "body_file": "bodies/F21b__pdf__noparams.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

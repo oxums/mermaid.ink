@@ -1,0 +1,14 @@
+{
+  "id": "K01__svg-options__noparams",
+  "status": 204,
+  "headers": {
+    "access-control-allow-methods": "GET",
+    "access-control-allow-origin": "http://cross.origin.com",
+    "vary": "Origin"
+  },
+  "body_len": 0,
+  "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "body_file": null,
+  "error_text": null,
+  "nondeterministic": false
+}

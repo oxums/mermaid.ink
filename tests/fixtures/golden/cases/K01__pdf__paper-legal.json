@@ -1,0 +1,21 @@
+{
+  "id": "K01__pdf__paper-legal",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "64056",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 64056,
+  "body_sha256": "a372eedfae1526d7d41aae68e26fe80429dd929c40263a1906a68b4a9f2777fe",
+  "body_file": "bodies/K01__pdf__paper-legal.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "second": {
+    "status": 200,
+    "body_len": 64056,
+    "body_sha256": "f405b4357b00846fc2abd8acc1a65388715f3c5e15a7ddf09dc7ae12ff2c07aa"
+  },
+  "nondeterministic_ignoring_pdf_dates": false
+}

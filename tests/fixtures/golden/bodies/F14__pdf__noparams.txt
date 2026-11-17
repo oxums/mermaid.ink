@@ -1,0 +1,4 @@
+Parse error on line 3:
+...osed --> B    B -->|label C
+----------------------^
+Expecting 'SQE', 'TAGEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PIPE'

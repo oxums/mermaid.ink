@@ -1,0 +1,15 @@
+{
+  "id": "F20.base64__svg__noparams",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "69",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 69,
+  "body_sha256": "0a0a4811121f6d070f5cc04eda29ac499e62bbd7d17e8ba94e380da13e65ee74",
+  "body_file": "bodies/F20.base64__svg__noparams.txt",
+  "error_text": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+  "nondeterministic": false
+}

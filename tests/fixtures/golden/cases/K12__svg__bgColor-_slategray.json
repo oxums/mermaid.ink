@@ -1,0 +1,15 @@
+{
+  "id": "K12__svg__bgColor-_slategray",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "10203",
+    "content-type": "image/svg+xml",
+    "vary": "Origin"
+  },
+  "body_len": 10203,
+  "body_sha256": "4e30726b343a6800f2608f0e93c38447a5522948366692cde007287635b39e4c",
+  "body_file": "bodies/K12__svg__bgColor-_slategray.svg",
+  "error_text": null,
+  "nondeterministic": false
+}

@@ -1,0 +1,90 @@
+# Deliberate behaviour differences from the legacy Node service (docs/PLAN.md "Compatibility contract").
+# Read by tests/parity.rs. Each entry: `cases` (golden case ids, `*` wildcard), a `reason`, and
+# optionally `status` (the status we return instead; then only status and CORS are compared) and
+# `skip` (failure categories not counted for those cases). Entries with no cases document a
+# divergence that no golden case exercises.
+
+[[divergence]]
+cases = ["*__svg__bgColor-a.bgColor-b", "*__svg__theme-a.theme-b"]
+status = 200
+reason = "Repeated query params use the first value. Legacy built arrays and called string methods on them (500)."
+
+[[divergence]]
+cases = ["F11.base64__svg__noparams", "F11.plain__svg__noparams", "F12.base64__svg__noparams"]
+status = 414
+reason = """Request targets over 64 KiB never reach the app: hyper/http::Uri reject them with 414 URI Too Long.
+Node answered 431 for anything over its 16 KB header limit; we answer 431 for MAX_URL_BYTES (16384) < target <= 64 KiB."""
+
+[[divergence]]
+cases = []
+reason = "503 responses carry Retry-After: 1 (Koa's onerror stripped it). Not compared by the harness."
+
+[[divergence]]
+cases = []
+reason = "/svg responses carry Content-Security-Policy, and on* attributes, <script>, and javascript:/vbscript:/data:text/html URLs are stripped (F21c kept javascript: hrefs). The harness summary does not compare hrefs."
+
+[[divergence]]
+cases = []
+reason = "200 and 400 responses carry Cache-Control: public, max-age=HTTP_CACHE_MAX_AGE and a weak ETag; If-None-Match answers 304. Not compared by the harness."
+
+[[divergence]]
+cases = []
+reason = "Decoded diagrams over MAX_DECODED_BYTES are 400 'Decoded diagram is too large' (legacy had no cap). See tests/hardening.rs."
+
+[[divergence]]
+cases = []
+reason = "QUEUE_CONCURRENCY defaults to the CPU count (legacy: 1). Load shedding at QUEUE_MAX_PENDING returns 503 immediately."
+
+[[divergence]]
+cases = []
+reason = "Mermaid parse/limit errors are 400 with merman's message text; the harness compares only their status."
+
+[[divergence]]
+cases = []
+reason = "Output encoders differ from Chrome's: PNGs and PDFs are smaller for the same picture, so tests/kitchensink.rs lowers legacy's K01 PNG (18/19 KB) and PDF (16 KB) size floors to 12 KB."
+
+[[divergence]]
+cases = []
+reason = "JPEG output paints transparent areas white. Chrome's screenshots painted them white or black at random (26 of 76 default JPEG goldens are black), so for black-background JPEG goldens tests/parity.rs re-requests the case with type=png and compares that, composited on black."
+
+# --- Renderer fidelity gaps in merman 0.10 (upstream; see docs/upstream-issues.md) ---
+
+[[divergence]]
+cases = ["T28*", "K10__*"]
+skip = ["svg-viewbox", "img-dims", "img-ssim", "img-ink", "pdf-ssim", "pdf-ink"]
+reason = "ZenUML: merman lays participants/groups out narrower than @zenuml/core 3.49.2 (883x628 vs 935x624). Upstream issue 1."
+
+[[divergence]]
+cases = ["T08__*", "K04__*"]
+skip = ["img-dims", "img-ssim", "img-ink", "pdf-ssim", "pdf-ink", "pdf-pages", "pdf-mediabox", "svg-colors"]
+reason = "Sequence diagrams: merman message rows are 2px taller, the bottom margin under mirrored actors is missing and actor spacing differs, so sizes and page breaks shift. Upstream issue 2."
+
+[[divergence]]
+cases = ["T32*__svg__noparams", "T35*__svg__noparams", "T38*__svg__noparams", "T39*__svg__noparams", "T41*__svg__noparams"]
+skip = ["svg-colors"]
+reason = "merman's stylesheet for packet/radar/venn/ishikawa/railroad omits a theme rule using #9370db that Mermaid emits but no element uses; rendering is unaffected. Upstream issue 3."
+
+[[divergence]]
+cases = ["T09*"]
+skip = ["svg-dash", "img-ssim"]
+reason = "Class diagram note link is drawn solid instead of dotted. Upstream issue 4."
+
+[[divergence]]
+cases = ["T33__img__*"]
+skip = ["img-ssim"]
+reason = "Kanban card text ignores the inline text-align:left !important and is centered. Upstream issue 5."
+
+[[divergence]]
+cases = ["F06__img__*", "F09__img__*", "F10__img__*", "F11__img__*", "F21a__img__*", "K12__img__*", "K13__img__*", "K15__img__*", "K20__img__*", "K21__img__*", "K23__img__*", "T18__img__*", "T21__img__*", "T23__img__*", "T24__img__*", "T26__img__*", "T29__img__*", "T30__img__*", "T37__img__*", "T42__img__*"]
+skip = ["img-ssim"]
+reason = "Small text-heavy rasters score SSIM 0.83-0.899: merman's raster text sits ~1px lower than Chrome's (line baseline / half-leading), font fallback is per line not per glyph, and FA icon boxes are not 1.25em wide. Structure, labels and dimensions still match. Upstream issue 6."
+
+[[divergence]]
+cases = ["T07__img__*", "T19w__img__*", "T31__img__*", "T38__img__*", "T38__pdf__*"]
+skip = ["img-ssim", "img-ink", "pdf-ink"]
+reason = "Markdown italics/bold metrics (T07), very wide gitGraph label placement (T19w), block-beta and venn-beta geometry differ in merman 0.10. Upstream issue 6/7."
+
+[[divergence]]
+cases = ["F03__img__*"]
+skip = ["img-ssim"]
+reason = "look: handDrawn uses roughr (seeded RoughJS port): strokes are not coordinate-identical to RoughJS. Legacy output was itself random per request."

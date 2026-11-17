@@ -1,0 +1,41 @@
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Validating : submit
+    state Validating {
+        [*] --> CheckFormat
+        CheckFormat --> CheckLimits
+        CheckLimits --> [*]
+    }
+    Validating --> Decide
+    state Decide <<choice>>
+    Decide --> Rejected : invalid
+    Decide --> Split : valid
+    state Split <<fork>>
+    Split --> Charge
+    Split --> Reserve
+    Split --> Notify
+    state Join <<join>>
+    Charge --> Join
+    Reserve --> Join
+    Notify --> Join
+    Join --> Processing
+    state Processing {
+        [*] --> Packing
+        Packing --> Shipping
+        Shipping --> Delivered
+        Delivered --> [*]
+        --
+        [*] --> Invoicing
+        Invoicing --> Paid
+        Paid --> [*]
+    }
+    Processing --> Archived
+    Archived --> Audited
+    Audited --> Closed
+    Rejected --> Closed
+    Closed --> [*]
+    note right of Decide : choice node
+    note left of Processing
+        concurrent
+        regions
+    end note

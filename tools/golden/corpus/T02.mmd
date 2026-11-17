@@ -1,0 +1,23 @@
+flowchart LR
+    subgraph ingest [Ingest]
+        direction TB
+        a1[Upload] --> a2[Validate]
+    end
+    subgraph process [Process]
+        b1[Parse] --> b2[(Store)]
+    end
+    subgraph out [Output]
+        c1>Report] --> c2{{Notify}}
+    end
+    a2 --> b1
+    b2 --> c1
+    b2 -.-> c2
+    a1 ==> c2
+    classDef hot fill:#f96,stroke:#333,stroke-width:2px,color:#000
+    classDef cold fill:#9cf,stroke:#036
+    class a1,a2 hot
+    class c1,c2 cold
+    linkStyle 0 stroke:#ff3,stroke-width:4px,color:red
+    linkStyle 3 stroke:#0a0,stroke-dasharray:5 5
+    click a1 href "https://example.com/upload" "Upload docs" _blank
+    click b1 href "https://example.com/parse"

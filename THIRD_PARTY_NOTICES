@@ -1,0 +1,101 @@
+THIRD-PARTY NOTICES
+
+mermaid-ink itself is MIT licensed (see LICENSE). The server binary and the Docker image also
+contain the third-party components below. Most Rust dependencies are MIT and/or Apache-2.0; this
+file lists the ones under other licenses, plus everything bundled that is not a Rust crate.
+The full, current list comes from `cargo metadata` (or `cargo about`/`cargo deny list`) against
+Cargo.lock; every crate's license text ships in its crates.io source package.
+
+The Docker image keeps this file and LICENSE in /usr/share/doc/mermaid-ink/, and the Debian
+copyright files of the font packages in /usr/share/doc/mermaid-ink/fonts/.
+
+
+1. EPL-2.0: merman-elk-layered 0.10.0
+-------------------------------------
+merman-elk-layered (a Rust translation of the Eclipse ELK layered layout algorithm, used by
+merman for `layout: elk`) is licensed under the Eclipse Public License 2.0.
+  License text: https://www.eclipse.org/legal/epl-2.0/ (also LICENSES/EPL-2.0.txt in the crate)
+  Source code:  https://crates.io/crates/merman-elk-layered/0.10.0
+                https://github.com/Latias94/merman (crates/merman-elk-layered)
+  Upstream:     https://github.com/eclipse-elk/elk
+The crate is used unmodified. Its source is available at the locations above, as EPL-2.0
+section 3 requires for distribution in object code form.
+
+
+2. Fonts (bundled in the image at /usr/share/mermaid-ink/fonts; fetched by tools/fonts/fetch.sh)
+------------------------------------------------------------------------------------------------
+The fonts are unmodified copies from the pinned Debian bookworm packages, except FontAwesome,
+which is converted from WOFF2 to TTF. Sources: `apt-get source <package>` or
+https://sources.debian.org/src/<package>/<version>/
+
+  Liberation Sans 1.07.4 (10-13-LiberationSans-*.ttf)
+    Debian fonts-liberation 1:1.07.4-11
+    GPL-2.0 with the Liberation font embedding exception. Copyright (C) 2007 Red Hat, Inc.
+
+  DejaVu Sans, DejaVu Sans Mono 2.37 (20-22-DejaVu*.ttf)
+    Debian fonts-dejavu-core 2.37-6
+    Bitstream Vera Fonts license (plus the Arev fonts license; DejaVu changes are public domain).
+    Copyright (c) 2003 Bitstream, Inc.
+
+  Loma (25-Loma.ttf)
+    Debian fonts-tlwg-loma-ttf 1:0.7.3-1
+    GPL-2.0-or-later with font exception. Copyright (c) 2003 National Electronics and Computer
+    Technology Center (NECTEC), Thai Linux Working Group.
+
+  GNU FreeFont: FreeSans, FreeSerif (30-31-Free*.ttf)
+    Debian fonts-freefont-ttf 20120503-10
+    GPL-3.0-or-later with the GNU FreeFont font exception. Copyright 2002-2012 GNU FreeFont
+    contributors. Source: https://savannah.gnu.org/projects/freefont/
+
+  WenQuanYi Zen Hei 0.9.45 (40-WenQuanYiZenHei.ttc)
+    Debian fonts-wqy-zenhei 0.9.45-8
+    GPL-2.0 with font embedding exception (and the M+ FONTS License for the glyphs derived from
+    M+). Copyright 2007-2009 Qianqian Fang and The WenQuanYi Project Board of Trustees.
+
+  Noto Color Emoji 2.042 (50-NotoColorEmoji.ttf)
+    Debian fonts-noto-color-emoji 2.042-0+deb12u1
+    SIL Open Font License 1.1. Copyright 2013-2017 Google Inc.
+
+  Font Awesome Free 7.2.0 (60-62-FontAwesome7*.ttf, and the icon table
+  crates/mink-render/src/fa_icons.txt derived from its metadata)
+    npm @fortawesome/fontawesome-free 7.2.0
+    Fonts: SIL Open Font License 1.1. Icons: CC BY 4.0. Code/metadata: MIT.
+    Copyright Fonticons, Inc. https://fontawesome.com/license/free
+
+The font exceptions mean that embedding these fonts in a rendered PDF, PNG or SVG does not by
+itself put that document under the GPL.
+
+
+3. Bundled C/C++ libraries
+--------------------------
+  libwebp (vendored and statically linked by libwebp-sys 0.14.4)
+    BSD-3-Clause, plus the WebM additional IP rights grant (PATENTS).
+    Copyright (c) 2010, Google Inc. https://chromium.googlesource.com/webm/libwebp
+
+  AWS-LC (aws-lc-sys 0.47.0, used through aws-lc-rs 1.19.0 as the rustls crypto provider)
+    ISC AND (Apache-2.0 OR ISC) AND Apache-2.0 AND MIT AND BSD-3-Clause, plus the OpenSSL and
+    SSLeay licenses for code inherited from BoringSSL/OpenSSL.
+    https://github.com/aws/aws-lc and https://github.com/aws/aws-lc-rs
+
+  mimalloc (libmimalloc-sys 0.1.49): MIT. Copyright (c) Microsoft Corporation.
+
+
+4. Rust crates under licenses other than MIT / Apache-2.0
+---------------------------------------------------------
+  BSD-3-Clause            redis 1.8.2, tiny-skia 0.12.0, tiny-skia-path 0.12.0, subtle 2.6.1,
+                          alloc-no-stdlib 2.0.4, alloc-stdlib 0.2.4
+  BSD-3-Clause/MIT        brotli-decompressor 5.0.3
+  BSD-2-Clause            arrayref 0.3.9
+  MIT AND BSD-3-Clause    matchit 0.8.4
+  (Apache-2.0 OR MIT) AND BSD-3-Clause   encoding_rs 0.8.44
+  MPL-2.0                 cssparser 0.38.0, cssparser-macros 0.7.1, dtoa-short 0.3.5
+                          (unmodified; source on crates.io)
+  ISC                     rustls-webpki 0.103.17, untrusted 0.9.0
+  Apache-2.0 AND ISC      ring 0.17.14
+  Zlib                    zlib-rs 0.6.8, foldhash 0.2.0, slotmap 1.1.1
+  BSL-1.0                 xxhash-rust 0.8.21 (ryu / ryu-js: Apache-2.0 OR BSL-1.0)
+  Unicode-3.0             the ICU4X crates (icu_*, zerovec, zerotrie, yoke, tinystr, litemap,
+                          writeable, potential_utf, zerofrom), unicode-ident,
+                          unicode-normalization, unicode-properties
+  CDLA-Permissive-2.0     webpki-roots 1.0.12, webpki-root-certs 1.0.12 (Mozilla CA data)
+  Unlicense OR MIT        memchr, aho-corasick, byteorder-lite, walkdir, same-file

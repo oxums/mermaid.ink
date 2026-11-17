@@ -1,0 +1,16 @@
+{
+  "id": "K01__pdf__paper-letter.landscape",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "64055",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 64055,
+  "body_sha256": "7f40a42d9f5dbff32e86e8d2fa0158bcf21438cab5665946daf7796478a9046c",
+  "body_file": "bodies/K01__pdf__paper-letter.landscape.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

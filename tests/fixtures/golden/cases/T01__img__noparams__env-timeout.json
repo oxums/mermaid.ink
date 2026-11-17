@@ -1,0 +1,15 @@
+{
+  "id": "T01__img__noparams__env-timeout",
+  "status": 503,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "19",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 19,
+  "body_sha256": "f6fc3c777e463ecb2820493f3e7ee6242ab9700be016014b07b25ea56901f51d",
+  "body_file": "bodies/T01__img__noparams__env-timeout.txt",
+  "error_text": "Service Unavailable",
+  "nondeterministic": false
+}

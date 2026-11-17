@@ -1,0 +1,7 @@
+target/
+fonts/
+tests/
+tools/golden/
+.git/
+.github/
+docs/

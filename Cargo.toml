@@ -1,0 +1,57 @@
+[workspace]
+members = ["crates/*"]
+resolver = "3"
+
+[package]
+name = "mermaid-ink"
+version = "18.0.0"
+edition = "2024"
+license = "MIT"
+description = "Render Mermaid diagrams to SVG/PNG/JPEG/WebP/PDF over HTTP, natively in Rust"
+publish = false
+
+[features]
+# Test seam only (tests/hardening.rs): a closure run before every render. Never enabled in release builds.
+test-hooks = []
+
+[dependencies]
+mink-core = { path = "crates/mink-core" }
+mink-render = { path = "crates/mink-render" }
+mink-fetch = { path = "crates/mink-fetch" }
+mink-cache = { path = "crates/mink-cache" }
+axum = "0.8.9"
+bytes = "1"
+hyper = { version = "1.12", features = ["server", "http1"] }
+hyper-util = { version = "0.1.21", features = ["server", "server-graceful", "service", "http1", "tokio"] }
+mimalloc = "0.1"
+rustls = { version = "0.23", default-features = false, features = ["aws_lc_rs"] }
+serde_json = "1"
+sha2 = "0.11"
+tokio = { version = "1.54", features = ["rt-multi-thread", "macros", "net", "signal", "sync", "time"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dev-dependencies]
+mermaid-ink = { path = ".", features = ["test-hooks"] }
+mink-fetch = { path = "crates/mink-fetch", features = ["insecure-test-loopback"] }
+base64 = "0.23"
+flate2 = "1.1"
+http-body-util = "0.1"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp"] }
+image-compare = "0.5"
+hayro = "0.9"
+lopdf = { version = "0.47", default-features = false }
+rcgen = "0.14"
+roxmltree = "0.21"
+serde = { version = "1", features = ["derive"] }
+tokio-rustls = "0.26"
+toml = "0.9"
+tower = { version = "0.5", features = ["util"] }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+# never panic = "abort": a renderer panic must become a 500, not kill the server
+
+[profile.dev.package."*"]
+opt-level = 2 # merman/resvg are far too slow unoptimized, even in tests

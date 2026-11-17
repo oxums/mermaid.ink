@@ -1,0 +1,15 @@
+{
+  "id": "D04__serde-hasownproperty",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "55",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 55,
+  "body_sha256": "dcc3d35b6c8385d22bf0c547b438c66395d8d698a771403cf7e382c0aeee5614",
+  "body_file": "bodies/D04__serde-hasownproperty.txt",
+  "error_text": "Cannot read properties of undefined (reading 'replace')",
+  "nondeterministic": false
+}

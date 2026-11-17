@@ -1,0 +1,15 @@
+{
+  "id": "F06__svg__noparams",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "12960",
+    "content-type": "image/svg+xml",
+    "vary": "Origin"
+  },
+  "body_len": 12960,
+  "body_sha256": "2c4a606a02a8c203d0c13355202e8ebf8c1af4f9ca22dc144e7e3ee80099ece1",
+  "body_file": "bodies/F06__svg__noparams.svg",
+  "error_text": null,
+  "nondeterministic": false
+}

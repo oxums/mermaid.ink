@@ -1,0 +1,15 @@
+{
+  "id": "K01__svg__width-1000.scale-1.006__env-maxw",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "43",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 43,
+  "body_sha256": "edd301e581a4c844f7a3b3475d3f3256c92e0d6460ea3aebc94e138f658e3163",
+  "body_file": "bodies/K01__svg__width-1000.scale-1.006__env-maxw.txt",
+  "error_text": "the scaled width must be between 1 and 1005",
+  "nondeterministic": false
+}

@@ -1,0 +1,33 @@
+sequenceDiagram
+    autonumber
+    box Aqua Frontend
+        actor U as User
+        participant W as Web
+    end
+    box Backend
+        participant A as API
+        participant D as DB
+    end
+    U->>W: Open page
+    activate W
+    W->>+A: GET /items
+    loop Every page
+        A->>D: SELECT items
+        D-->>A: rows
+    end
+    alt cache hit
+        A-->>W: 200 cached
+    else cache miss
+        A->>D: refresh
+        A-->>W: 200 fresh
+    end
+    par notify
+        A-)U: push
+    and log
+        A-)D: audit
+    end
+    deactivate A
+    Note right of W: renders list
+    Note over U,W: done
+    W-->>U: page
+    deactivate W

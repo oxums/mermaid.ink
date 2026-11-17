@@ -1,0 +1,16 @@
+{
+  "id": "K01__pdf__landscape",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "64075",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 64075,
+  "body_sha256": "cbf57bb39b5f8faf8e4d9fef2421fb6d9e93bf0d5fac3bf31a49ee94e65e3714",
+  "body_file": "bodies/K01__pdf__landscape.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "T12__pdf__paper-letter.landscape",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "261868",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 261868,
+  "body_sha256": "8f5db4b7e89c818ae985b3cac66f9cd6be99de77f771ad0f5cb314580a123010",
+  "body_file": "bodies/T12__pdf__paper-letter.landscape.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "second": {
+    "status": 200,
+    "body_len": 261860,
+    "body_sha256": "cbae4a71f1d17b31da6b430cd1f346a57aa1be60637a30f3802b250adb1a9755"
+  },
+  "nondeterministic_ignoring_pdf_dates": true
+}

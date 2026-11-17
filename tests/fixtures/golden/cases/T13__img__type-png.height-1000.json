@@ -1,0 +1,15 @@
+{
+  "id": "T13__img__type-png.height-1000",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "59124",
+    "content-type": "image/png",
+    "vary": "Origin"
+  },
+  "body_len": 59124,
+  "body_sha256": "c9abfb9422b785a8917496c25a7e10cc2d559580bbafaf95473e8332e7c69552",
+  "body_file": "bodies/T13__img__type-png.height-1000.png",
+  "error_text": null,
+  "nondeterministic": false
+}

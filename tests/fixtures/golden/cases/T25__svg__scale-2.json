@@ -1,0 +1,15 @@
+{
+  "id": "T25__svg__scale-2",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "56",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 56,
+  "body_sha256": "d0f2fbdd91c031174ca02fb5154ae5d4de3e5feec88a18615ad5cd9546377e5e",
+  "body_file": "bodies/T25__svg__scale-2.txt",
+  "error_text": "scale can only be set when either width or height is set",
+  "nondeterministic": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "T25__svg__bgColor-123123",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "45201",
+    "content-type": "image/svg+xml",
+    "vary": "Origin"
+  },
+  "body_len": 45201,
+  "body_sha256": "57e34d251a0440c92f38f9a83f9cb148016c58120910606f925bcf34377d5c52",
+  "body_file": "bodies/T25__svg__bgColor-123123.svg",
+  "error_text": null,
+  "nondeterministic": false
+}

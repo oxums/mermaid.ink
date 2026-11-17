@@ -1,0 +1,19 @@
+[package]
+name = "mink-cache"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[dependencies]
+bytes = "1"
+moka = { version = "0.12.16", features = ["future"] }
+redis = { version = "1.8", default-features = false, features = ["tokio-comp", "connection-manager", "tokio-rustls-comp", "tls-rustls-webpki-roots"] }
+rustls = { version = "0.23", default-features = false, features = ["aws_lc_rs"] }
+tokio = { version = "1.54", features = ["rt", "time"] }
+tracing = "0.1"
+
+[dev-dependencies]
+# Test-only: lets redis_round_trip reach a self-signed TLS container (rediss://.../#insecure).
+redis = { version = "1.8", default-features = false, features = ["tls-rustls-insecure"] }
+tokio = { version = "1.54", features = ["macros", "rt-multi-thread"] }

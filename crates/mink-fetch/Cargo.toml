@@ -1,0 +1,26 @@
+[package]
+name = "mink-fetch"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[features]
+# Only for this workspace's tests: lets a fetcher reach loopback/self-signed fixture servers.
+# Never enabled by the server binary.
+insecure-test-loopback = []
+
+[dependencies]
+mink-core = { path = "../mink-core" }
+bytes = "1"
+hickory-resolver = "0.26"
+imagesize = "0.15"
+moka = { version = "0.12.16", features = ["future"] }
+reqwest = { version = "0.13.5", default-features = false, features = ["rustls"] }
+tokio = { version = "1.54", features = ["rt", "sync", "time"] }
+
+[dev-dependencies]
+mink-fetch = { path = ".", features = ["insecure-test-loopback"] }
+rcgen = "0.14"
+tokio = { version = "1.54", features = ["macros", "rt-multi-thread", "net", "io-util"] }
+tokio-rustls = "0.26"

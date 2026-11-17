@@ -1,0 +1,22 @@
+classDiagram
+    namespace Shapes {
+        class Shape~T~ {
+            <<abstract>>
+            +String name
+            -List~T~ points
+            +area()* double
+            +move(dx int, dy int) void
+        }
+        class Circle {
+            +double radius
+            +area() double
+        }
+    }
+    class Repository~K, V~ {
+        +get(K key) V
+        +put(K key, V value)$ void
+    }
+    Shape~T~ <|-- Circle
+    Repository "1" --> "*" Shape : stores
+    note for Circle "Radius in px"
+    note "A free note"

@@ -1,0 +1,16 @@
+{
+  "id": "K01__pdf__paper-a6",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "47347",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 47347,
+  "body_sha256": "9330f2ae3c8a759f77a13dfa2d92dd15bf65a8f0cc8ccd683ca2668618147881",
+  "body_file": "bodies/K01__pdf__paper-a6.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

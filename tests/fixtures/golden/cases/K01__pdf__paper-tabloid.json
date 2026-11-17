@@ -1,0 +1,16 @@
+{
+  "id": "K01__pdf__paper-tabloid",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "64061",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 64061,
+  "body_sha256": "d86b9dbd724dd23196e81acde4b2caf1a18740aa5ab05f47ee8a10c305946c33",
+  "body_file": "bodies/K01__pdf__paper-tabloid.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

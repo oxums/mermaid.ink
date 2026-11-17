@@ -1,0 +1,3 @@
+# Shell scripts and checksum lists run/compare inside Linux containers.
+*.sh text eol=lf
+tools/fonts/SHA256SUMS text eol=lf

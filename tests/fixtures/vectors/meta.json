@@ -1,0 +1,9 @@
+{
+ "node": "v24.22.2",
+ "js_base64": "3.9.6",
+ "pako": "3.0.3",
+ "generated": "2026-11-17",
+ "seed": "0x5eed",
+ "prng": "mulberry32",
+ "generator": "tools/golden/gen-vectors.mjs"
+}

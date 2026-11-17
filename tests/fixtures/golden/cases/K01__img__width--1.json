@@ -1,0 +1,15 @@
+{
+  "id": "K01__img__width--1",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "19",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 19,
+  "body_sha256": "0a718a2720d2908cf864f4066ab13add2b6515915ef9e89255ba0758340f24ae",
+  "body_file": "bodies/K01__img__width--1.txt",
+  "error_text": "invalid width value",
+  "nondeterministic": false
+}

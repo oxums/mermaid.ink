@@ -1,0 +1,16 @@
+{
+  "id": "T08__pdf__paper-A3~9690b9",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "166540",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 166540,
+  "body_sha256": "e605093590585850981308f1ab9cce6fc4143e122611f17845f19ff786caf916",
+  "body_file": "bodies/T08__pdf__paper-A3~9690b9.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "F19__svg__theme-dark",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "47",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 47,
+  "body_sha256": "8871bee08f0ea58f8de4a2f9cbe91c1024c0827380f69e8c4db90cb8d7497b87",
+  "body_file": "bodies/F19__svg__theme-dark.txt",
+  "error_text": "Cannot set properties of null (setting 'theme')",
+  "nondeterministic": false
+}

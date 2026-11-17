@@ -1,0 +1,14 @@
+C4Component
+    title Component diagram for Internet Banking System - API Application
+    Container(spa, "Single Page Application", "javascript and angular", "Provides banking functionality via a web browser.")
+    ContainerDb(db, "Database", "Relational Database Schema", "Stores user registration information.")
+    Container_Boundary(api, "API Application") {
+        Component(sign, "Sign In Controller", "MVC Rest Controller", "Allows users to sign in")
+        Component(accounts, "Accounts Summary Controller", "MVC Rest Controller", "Provides account summaries")
+        Component(security, "Security Component", "Spring Bean", "Provides sign in functionality")
+        Rel(sign, security, "Calls")
+        Rel(accounts, security, "Calls")
+        Rel(security, db, "Read & write to", "JDBC")
+    }
+    Rel(spa, sign, "Uses", "JSON/HTTPS")
+    Rel(spa, accounts, "Uses", "JSON/HTTPS")

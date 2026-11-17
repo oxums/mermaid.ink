@@ -1,0 +1,4 @@
+railroad-beta
+    title Expression
+    expr = sequence(nonterminal("term"), zeroOrMore(sequence(choice(terminal("+"), terminal("-")), nonterminal("term"))));
+    term = choice(terminal("number"), sequence(terminal("("), nonterminal("expr"), terminal(")")));

@@ -1,0 +1,17 @@
+[package]
+name = "mink-core"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[dependencies]
+base64 = "0.23"
+bytes = "1"
+flate2 = "1.1"
+ryu-js = "1.0"
+serde_json = "1"
+sha2 = "0.11"
+
+[dev-dependencies]
+proptest = "1"

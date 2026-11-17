@@ -1,0 +1,11 @@
+---
+config:
+  layout: elk
+---
+flowchart TD
+    A[Client] --> B[Load balancer]
+    B --> C[Server 1]
+    B --> D[Server 2]
+    C --> E[(Database)]
+    D --> E
+    E --> F[Backup]

@@ -1,0 +1,15 @@
+{
+  "id": "D25__head-no-origin-home",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "*",
+    "content-length": "17940",
+    "content-type": "text/html; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 0,
+  "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "body_file": null,
+  "error_text": null,
+  "nondeterministic": false
+}

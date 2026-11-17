@@ -1,0 +1,28 @@
+{"note":"no \"in\" key = param absent",
+ "entries": [
+  {"fn":"isLandscape","query_undefined":true,"out":false},
+  {"fn":"isLandscape","out":false},
+  {"fn":"isLandscape","in":"","out":true},
+  {"fn":"isLandscape","in":"false","out":true},
+  {"fn":"isLandscape","in":"true","out":true},
+  {"fn":"isLandscape","in":"0","out":true},
+  {"fn":"isLandscape","in":"1","out":true},
+  {"fn":"isLandscape","in":"no","out":true},
+  {"fn":"isLandscape","in":" ","out":true},
+  {"fn":"isLandscape","in":[],"out":true},
+  {"fn":"isLandscape","in":["false"],"out":true},
+  {"fn":"isLandscape","in":["",""],"out":true},
+  {"fn":"isFit","query_undefined":true,"out":false},
+  {"fn":"isFit","out":false},
+  {"fn":"isFit","in":"","out":true},
+  {"fn":"isFit","in":"false","out":true},
+  {"fn":"isFit","in":"true","out":true},
+  {"fn":"isFit","in":"0","out":true},
+  {"fn":"isFit","in":"1","out":true},
+  {"fn":"isFit","in":"no","out":true},
+  {"fn":"isFit","in":" ","out":true},
+  {"fn":"isFit","in":[],"out":true},
+  {"fn":"isFit","in":["false"],"out":true},
+  {"fn":"isFit","in":["",""],"out":true}
+ ]
+}

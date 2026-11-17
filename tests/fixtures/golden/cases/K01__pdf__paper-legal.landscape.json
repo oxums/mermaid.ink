@@ -1,0 +1,16 @@
+{
+  "id": "K01__pdf__paper-legal.landscape",
+  "status": 200,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "64055",
+    "content-type": "application/pdf",
+    "vary": "Origin"
+  },
+  "body_len": 64055,
+  "body_sha256": "e6c5e88cff056d94f269ff4cf2f516fc02949a2c99df6617a4c60af1463b923c",
+  "body_file": "bodies/K01__pdf__paper-legal.landscape.pdf",
+  "error_text": null,
+  "nondeterministic": true,
+  "nondeterministic_ignoring_pdf_dates": false
+}

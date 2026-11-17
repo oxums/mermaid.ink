@@ -1,0 +1,15 @@
+{
+  "id": "D02__pako-uppercase",
+  "status": 400,
+  "headers": {
+    "access-control-allow-origin": "https://parity.test",
+    "content-length": "24",
+    "content-type": "text/plain; charset=utf-8",
+    "vary": "Origin"
+  },
+  "body_len": 24,
+  "body_sha256": "15c7dad5811d31e19c92d560f0254d4699ae32d3b538bd6c170dcb829569710d",
+  "body_file": "bodies/D02__pako-uppercase.txt",
+  "error_text": "Unknown serde type: PAKO",
+  "nondeterministic": false
+}
